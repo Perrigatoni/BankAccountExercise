@@ -8,27 +8,36 @@ public class BankAccount {
     private double accountBalance = 1000;
     private int accountNumber;
 
-    public void setCustomerName(String customerName) {
+    // public void setCustomerName(String customerName) {
+    //     this.customerName = customerName;
+    //     setAccountNumber();
+    // }
+
+    // public void setCustomerEmail(String customerEmail) {
+    //     this.customerEmail = customerEmail;
+    // }
+
+    // public void setPhoneNumber(long phoneNumber) {
+    //     this.phoneNumber = phoneNumber;
+    // }
+
+    // public void setAccountBalance(int accounBalance) {
+    //     this.accountBalance = accounBalance;
+    // }
+
+    // private void setAccountNumber() {
+    //     Random random = new Random();
+    //     this.accountNumber = random.nextInt(1000);
+    // }
+
+    public BankAccount (String customerName, String email, long phoneNumber,
+                        double balance, int accountNumber) {
         this.customerName = customerName;
-        setAccountNumber();
-    }
-
-    public void setCustomerEmail(String customerEmail) {
-        this.customerEmail = customerEmail;
-    }
-
-    public void setPhoneNumber(long phoneNumber) {
+        customerEmail = email;
         this.phoneNumber = phoneNumber;
-    }
-
-    public void setAccountBalance(int accounBalance) {
-        this.accountBalance = accounBalance;
-    }
-
-    private void setAccountNumber() {
-        Random random = new Random();
-        this.accountNumber = random.nextInt(1000);
-    }
+        accountBalance = balance;
+        this.accountNumber = accountNumber;
+                        }
 
     public String getCustomerName() {
         return customerName;
